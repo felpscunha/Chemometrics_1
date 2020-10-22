@@ -1,0 +1,8 @@
+# Como ler arquivos do tipo CSV
+# Existem várias formas de se fazer, isso. Vou apresentar a forma mais simples aqui que é ler apenas um arquivo
+
+import pandas as pd # Vamos precisar da biblioteca pandas
+
+caminho = r'C:\Users\felip\OneDrive - Universidade Federal de Pernambuco\Quimiometria\Quimiometria 2\Dados\Em .csv\curva CAF\P10R1.csv' # Aqui eu crio o caminho para a pasta onde se encontra o arquivo que quero encontrar... 
+arquivo = pd.read_csv(caminho, encoding='utf-16') # Leitura do arquivo, especifico o caminho e no meu caso, precisei especificar o tipo de codificação do meu arquivo pois estava dando erro... mas a princípio você não precisa utilizar o "encoding"
+print(arquivo.head()) # Aqui eu dou uma olhada no cabeçalho dos meus dados
